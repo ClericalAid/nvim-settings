@@ -23,6 +23,7 @@ let g:coc_global_extensions = [
   \ 'coc-eslint',
   \ ]
 set number
+set relativenumber
 set expandtab
 set smarttab
 set autoindent
