@@ -17,6 +17,8 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " Prettier
@@ -53,7 +55,7 @@ lua <<EOF
 require('nvim-treesitter.configs').setup {
   ensure_installed = "all",
   highlight = { enable = true },
-  indent = { enable = true }
+  indent = { enable = false }
 }
 EOF
 
